@@ -62,7 +62,6 @@ class Wpacw_Admin {
 	public function enqueue_styles() {
 
 		/**
-		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
 		 * defined in Wpacw_Loader as all of the hooks are defined
@@ -73,7 +72,7 @@ class Wpacw_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'css/wpacw-admin.css', array(), $this->version, 'all' );
+		wp_enqueue_style( $this->plugin_name, plugin_dir_url( __FILE__ ) . '../dist/css/admin.css', array(), $this->version, 'all' );
 
 	}
 
@@ -85,7 +84,6 @@ class Wpacw_Admin {
 	public function enqueue_scripts() {
 
 		/**
-		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
 		 * defined in Wpacw_Loader as all of the hooks are defined
@@ -96,7 +94,7 @@ class Wpacw_Admin {
 		 * class.
 		 */
 
-		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . 'js/wpacw-admin.js', array( 'jquery' ), $this->version, false );
+		wp_enqueue_script( $this->plugin_name, plugin_dir_url( __FILE__ ) . '../dist/js/admin.min.js', array( 'jquery' ), $this->version, false );
 
 	}
 

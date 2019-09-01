@@ -103,24 +103,24 @@ class Wpacw {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wpacw-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/class-wpacw-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wpacw-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/class-wpacw-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wpacw-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/class-wpacw-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wpacw-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/class-wpacw-public.php';
 
 		$this->loader = new Wpacw_Loader();
 
