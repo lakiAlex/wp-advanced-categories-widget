@@ -62,7 +62,7 @@ Class Wpacw_Widget extends WP_Widget {
 							if ( $i <= $number ) {
 					            ?>
 					            
-				                    <a class="wpacw__cat" href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php esc_url( the_post_thumbnail_url( 'landscape-sm' ) ); ?>">
+				                    <a class="wpacw__cat" href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php esc_url( the_post_thumbnail_url( 'large' ) ); ?>">
 										<div>
 											<span><?php echo esc_html( $cat->name ); ?></span>
 											<span><?php echo esc_html( $cat->count ); ?></span>
