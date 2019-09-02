@@ -60,16 +60,36 @@ Class Wpacw_Widget extends WP_Widget {
 						foreach( $categories as $cat ) {
 	
 							if ( $i <= $number ) {
-					            ?>
+							
+								$args = array(
+									'category__in'		=> $cat->term_id,
+									'post_type' 		=> 'post',
+									'posts_per_page'	=> '1',
+								);
+								$loop = new WP_Query($args);
+								while ( $loop->have_posts() ) : $loop->the_post();
+								$thumb = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+								
+								if ( $layout == 'style4' ) { ?>
+									
+									<div class="wpacw__cat">
+										<a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php echo esc_url( $thumb ); ?>">
+											<span><?php echo esc_html( $cat->count ); ?></span>
+					                    </a>
+					                    <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>"><h4><?php echo esc_html( $cat->name ); ?></h4></a>
+				                    </div><?php
+				                    
+								} else { ?>
 					            
-				                    <a class="wpacw__cat" href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php esc_url( the_post_thumbnail_url( 'large' ) ); ?>">
+				                    <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php echo esc_url( $thumb ); ?>">
 										<div>
 											<span><?php echo esc_html( $cat->name ); ?></span>
-											<span><?php echo esc_html( $cat->count ); ?></span>
+											<span class="wpacw__count"><?php echo esc_html( $cat->count ); ?></span>
 										</div>
-				                    </a>
+				                    </a><?php
 				                    
-				                <?php
+				                }
+				                endwhile;
 							}
 							
 							$i++;

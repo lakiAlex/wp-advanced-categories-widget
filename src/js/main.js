@@ -2,10 +2,10 @@
 
 function bgImage() {
 	
-	const dataBg = document.querySelectorAll('[data-bg-wpapw]');
+	const dataBg = document.querySelectorAll('[data-bg-wpacw]');
 	dataBg.forEach( function(el) {
-		var attr = el.getAttribute('data-bg-wpapw')
-		el.style.backgroundImage = 'url('+ attr +')';
+		var attr = el.getAttribute('data-bg-wpacw')
+		if (attr.length) el.style.backgroundImage = 'url('+ attr +')';
 	});
 	    
 }

@@ -9,6 +9,7 @@
 			background-position: center;
 			background-repeat: no-repeat;
 			background-size: cover;
+			background-color: #f8f8f8;
 			transition: $transition;
 			> div {
 				position: absolute;
@@ -17,11 +18,10 @@
 				left: -10px;
 				font-size: 0;
 				span {
-					@include text__link();
 					color: #fff;
 					position: relative;
 					display: inline-block;
-					font-size: 9.7px;
+					font-size: 10px;
 					font-weight: 500;
 					line-height: 12px;
 					text-transform: uppercase;
@@ -43,7 +43,8 @@
 				opacity: .85;
 			}
 		}
-		&.--center {
+		&.style2,
+		&.style3 {
 			> a {
 				display: flex;
 				align-items: center;
@@ -52,6 +53,101 @@
 					position: relative;
 					top: auto;
 					left: auto;
+				}
+			}
+		}
+		&.style3 {
+			> a {
+				height: 200px;
+				> div {
+    				span {
+    					color: #000;
+                    }
+				    span:first-child {
+    					background-color: #fff;
+    					padding: 13px 18px;
+    				}
+    				span:last-child {
+    				    background-color: #000;
+    					font-size: 10px;
+					    position: absolute;
+					    text-align: center;
+                        border-radius: 100px;
+                        line-height: 22px;
+                        width: 22px;
+                        height: 22px;
+                        color: #fff;
+                        margin-left: -7px;
+                        margin-top: -5px;
+                        padding: 0;
+    				}
+				}
+			}
+		}
+		&.style4 {
+		
+			.wpacw {
+				
+				&__cat {
+					display: flex;
+					align-items: center;
+					
+					> a:first-child {
+						border-radius: 100px;
+					    width: 100px;
+					    height: 100px;
+					    margin-right: 20px;
+					    
+					    span {
+					        background-color: #000;
+	    					font-size: 10px;
+						    position: absolute;
+						    top: 0;
+						    right: 10px;
+						    text-align: center;
+	                        border-radius: 100px;
+	                        line-height: 22px;
+	                        width: 22px;
+	                        height: 22px;
+	                        color: #fff;
+	                        padding: 0;
+					    }
+					}
+					
+					a:last-child {
+						display: flex;
+						align-items: center;
+						background-color: transparent;
+					}
+				}
+				
+			}
+		
+			> a:first-child {
+				border-radius: 100px;
+			    width: 100px;
+			    height: 100px;
+			    margin-right: 15px;
+				> div {
+				    span:first-child {
+    					display: none;
+    				}
+    				span:last-child {
+    				    background-color: #000;
+    					font-size: 10px;
+					    position: absolute;
+					    top: 0;
+					    right: 0;
+					    text-align: center;
+                        border-radius: 100px;
+                        line-height: 22px;
+                        width: 22px;
+                        height: 22px;
+                        color: #fff;
+                        margin-left: -7px;
+                        margin-top: -5px;
+                        padding: 0;
+    				}
 				}
 			}
 		}
