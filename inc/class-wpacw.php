@@ -121,6 +121,12 @@ class Wpacw {
 		 * side of the site.
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/class-wpacw-public.php';
+		
+		/**
+		 * The class responsible for extending WP_Widget class and
+		 * function to register widget.
+		 */
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'inc/class-wpacw-widget.php';
 
 		$this->loader = new Wpacw_Loader();
 
