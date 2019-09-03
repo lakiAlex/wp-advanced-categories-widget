@@ -12,7 +12,7 @@
 
 ## About
 
-WP Advanced Categories Widget is a no fuss WordPress widget to showcase your categories with auto-generated background image. It's lightweight, simple to use and powerful in features.
+WP Advanced Categories Widget is a no fuss WordPress widget to showcase your categories with auto-generated background image by taking the featured image from first post of each category. The widget is lightweight, simple to use and powerful in features.
 
 The widget is built with the following philosophy:
 
