@@ -34,7 +34,6 @@ Class Wpacw_Widget extends WP_Widget {
 		$count = empty( $instance['count'] ) ? 'on' : $instance['count'];
 		
 		echo $args['before_widget'];
-		 
 		do_action( 'wpacw_before_widget', $instance );
 		?>
 	
@@ -61,12 +60,12 @@ Class Wpacw_Widget extends WP_Widget {
 	
 							if ( $i <= $number ) {
 							
-								$args = array(
+								$query = array(
 									'category__in'		=> $cat->term_id,
 									'post_type' 		=> 'post',
 									'posts_per_page'	=> '1',
 								);
-								$loop = new WP_Query($args);
+								$loop = new WP_Query($query);
 								while ( $loop->have_posts() ) : $loop->the_post();
 								$thumb = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 								
@@ -96,7 +95,7 @@ Class Wpacw_Widget extends WP_Widget {
 				        }
 	
 					} else {
-						esc_html_e("You don't have any categories yet.");
+						esc_html_e("Oh, You don't have any categories.");
 					}
 				?>
 			</div>
