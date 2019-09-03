@@ -9,7 +9,7 @@
  * @wordpress-plugin
  * Plugin Name:       WP Advanced Categories Widget
  * Plugin URI:        https://github.com/lakiAlex/wp-advanced-categories-widget
- * Description:       This is a short description of what the plugin does. It's displayed in the WordPress admin area.
+ * Description:       WP Categories Posts Widget is a no fuss WordPress widget to display your categories with auto-generated background image.
  * Version:           1.0.0
  * Author:            Lazar Momcilovic
  * Author URI:        https://github.com/lakiAlex/
