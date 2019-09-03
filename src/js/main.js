@@ -1,6 +1,6 @@
 'use strict';
 
-function bgImage() {
+function dataBg() {
 	
 	const dataBg = document.querySelectorAll('[data-bg-wpacw]');
 	dataBg.forEach( function(el) {
@@ -10,6 +10,7 @@ function bgImage() {
 	    
 }
 
+// Check if document is on ready state
 function ready(fn) {
 	if (document.readyState != 'loading') {
 		fn();
@@ -18,7 +19,8 @@ function ready(fn) {
 	}
 }
 
-function completeAjax(fn) {
+// Check if XHR is complete
+function xhrComplete(fn) {
 	const send = XMLHttpRequest.prototype.send
     XMLHttpRequest.prototype.send = function() { 
         this.addEventListener('load', function() {
@@ -29,9 +31,9 @@ function completeAjax(fn) {
 }
 
 window.ready( function() {
-    bgImage();
+    dataBg();
 });
 
-window.completeAjax( function() {
-    bgImage();
+window.xhrComplete( function() {
+    dataBg();
 });
