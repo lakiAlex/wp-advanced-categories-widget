@@ -18,7 +18,7 @@ const wpPot = require("gulp-wp-pot");
 const gulpZip = require("gulp-zip");
 
 // Plugin slug
-const domain = "wpapw";
+const domain = "wpacw";
 
 // Synchronizing file changes
 function browserSync(done) {
