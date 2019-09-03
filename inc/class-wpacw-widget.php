@@ -41,13 +41,14 @@ Class Wpacw_Widget extends WP_Widget {
 
 			<div class="wpacw__cats <?php echo esc_html( $layout ); ?>">
 				<?php
-					$count = count( get_categories( array(
+					$cat_count = count( get_categories( array(
 						'parent' => 0,
 						'hide_empty' => 0
 					) ) );
-					if ( $count > 0 ) {
+					
+					if ( $cat_count > 0 ) {
+					
 						$i = 1;
-						
 						$categories = get_categories(
 							array(
 								'orderby' => $sort,
@@ -63,32 +64,34 @@ Class Wpacw_Widget extends WP_Widget {
 								$query = array(
 									'category__in'		=> $cat->term_id,
 									'post_type' 		=> 'post',
-									'posts_per_page'	=> '1',
+									'posts_per_page'	=> '1'
 								);
 								$loop = new WP_Query($query);
-								while ( $loop->have_posts() ) : $loop->the_post();
-								$thumb = get_the_post_thumbnail_url( get_the_ID(), 'large' );
 								
-								if ( $layout == 'style4' ) { ?>
-									
-									<div class="wpacw__cat">
-										<a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php echo esc_url( $thumb ); ?>">
-											<span><?php echo esc_html( $cat->count ); ?></span>
-					                    </a>
-					                    <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>"><h4><?php echo esc_html( $cat->name ); ?></h4></a>
-				                    </div><?php
-				                    
-								} else { ?>
-					            
-				                    <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php echo esc_url( $thumb ); ?>">
-										<div>
-											<span><?php echo esc_html( $cat->name ); ?></span>
-											<span class="wpacw__count"><?php echo esc_html( $cat->count ); ?></span>
-										</div>
-				                    </a><?php
-				                    
+								while ( $loop->have_posts() ) { $loop->the_post();
+									$thumb = get_the_post_thumbnail_url( get_the_ID(), 'large' );
+								
+									if ( $layout == 'style4' ) { ?>
+										
+										<div class="wpacw__cat">
+											<a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php echo esc_url( $thumb ); ?>">
+												<span><?php echo esc_html( $cat->count ); ?></span>
+						                    </a>
+						                    <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>"><h4><?php echo esc_html( $cat->name ); ?></h4></a>
+					                    </div><?php
+					                    
+									} else { ?>
+						            
+					                    <a href="<?php echo esc_url( get_term_link( $cat ) ); ?>" data-bg-wpacw="<?php echo esc_url( $thumb ); ?>">
+											<div>
+												<span><?php echo esc_html( $cat->name ); ?></span>
+												<span class="wpacw__count"><?php echo esc_html( $cat->count ); ?></span>
+											</div>
+					                    </a><?php
+					                    
+					                }
+					                
 				                }
-				                endwhile;
 							}
 							
 							$i++;
