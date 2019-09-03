@@ -4,7 +4,7 @@
 
 * Status: :coffee: Active
 * Contributors: [@lakialex](http://twitter.com/lakiAleksCS)
-* Description: WP Categories Posts Widget is a no fuss WordPress widget to showcase your latest or trending posts.
+* Description: WP Categories Posts Widget is a no fuss WordPress widget to showcase your categories with auto-generated background image.
 * Author: [Lazar Momcilovic](https://github.com/lakiAlex/)
 * Author URI: [https://github.com/lakiAlex/](https://github.com/lakiAlex/)
 * License: GNU General Public License v2.0 or later
