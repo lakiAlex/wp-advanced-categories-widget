@@ -1,4 +1,4 @@
-![WP Advanced Categories Widget](https://github.com/lakiAlex/wp-categories-posts-widget/blob/master/src/img/banner-1544x500.png)
+![WP Advanced Categories Widget](https://github.com/lakiAlex/wp-advanced-categories-widget/blob/master/src/img/banner-1544x500.png)
 
 # WP Categories Posts Widget
 
